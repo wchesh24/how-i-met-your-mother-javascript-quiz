@@ -5,7 +5,6 @@ const restartButton = document.getElementById('restart-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question');
 const answerButtonElement = document.getElementById('answer-buttons')
-const displayScore = document.getElementById('score')
 
 let shuffleQuestions, currentQuestionIndex
 
@@ -21,6 +20,10 @@ nextButton.addEventListener('click', () => {
 
 restartButton.addEventListener('click', () => {
     resetScore();
+    restartButton.classList.add('hide');
+    questionContainerElement.classList.add('hide')
+    showResults.classList.add('hide')
+    startButton.classList.remove('hide');
 })
 
 showResults.addEventListener('click', () => {
@@ -129,10 +132,30 @@ const myQuestions = [
     {
         question: "Who is the girl that both Ted and Barney fall in love with?",
         answers: [
-            { text: 'Rachel', correct: true},
-            { text: 'Robin', correct: false},
+            { text: 'Rachel', correct: false},
+            { text: 'Robin', correct: true},
             { text: 'Lily', correct: false},
             { text: 'Stella', correct: false}
+
+        ]
+    },
+    {
+        question: "Why did Lily break-up with Marshall?",
+        answers: [
+            { text: 'To pursue a career in acting', correct: false},
+            { text: 'In order to move to San Francisco to pursue art', correct: true},
+            { text: 'Marshall is the worst', correct: false},
+            { text: 'Ted lied to Lily about Marshall cheating', correct: false}
+
+        ]
+    },
+    {
+        question: "What does Ted present to Robin in the ending of the series finale?",
+        answers: [
+            { text: 'Her cherished necklase', correct: false},
+            { text: 'The Pineapple', correct: false},
+            { text: 'Another new dog', correct: false},
+            { text: 'Blue French Horn', correct: true}
 
         ]
     }
