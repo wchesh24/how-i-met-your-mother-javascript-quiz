@@ -10,8 +10,6 @@ let shuffleQuestions, currentQuestionIndex
 
 var correctAnswers = 0;
 
-
-
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -100,9 +98,13 @@ function selectAnswer(e) {
 }
 
 function showScore() {
-    alert("you got " + correctAnswers + "/" + myQuestions.length);
+    var scorePercentage = (correctAnswers*100)/myQuestions.length
+    if (scorePercentage > 90) {
+        alert("hello you got " + scorePercentage + "%")
+    } else {
+    alert("you got " + scorePercentage + "%" );
+    }
 }
-
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
