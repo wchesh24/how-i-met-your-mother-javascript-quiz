@@ -92,13 +92,40 @@
     justify-content: center;
     align-items: center;
   }
-
-  #score {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 35px;
-  }
   
+/* Modals */
+
+.modal, .modal-2,
+.modal-3, .modal-4,
+.modal-5 {
+  display: none;
+  position: fixed;
+  padding-top: 70px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.modal-content, .modal-content-2,
+.modal-content-3, .modal-content-4,
+.modal-content-5 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: justify;
+  background-color: white;
+  padding: 20px; 
+  margin: auto; 
+  width: 60%;  
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
   .hide {
     display: none;
   }

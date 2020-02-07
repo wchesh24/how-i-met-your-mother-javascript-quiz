@@ -5,8 +5,43 @@ const restartButton = document.getElementById('restart-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question');
 const answerButtonElement = document.getElementById('answer-buttons')
+// modals //
 
-let shuffleQuestions, currentQuestionIndex
+const modal = document.getElementById('modal')
+const modal2 = document.getElementById('modal-2')
+const modal3 = document.getElementById('modal-3')
+const modal4 = document.getElementById('modal-4')
+const modal5 = document.getElementById('modal-5')
+
+let modalBtn = document.querySelector('modal-btn')
+// let modalBtn2 = document.querySelector('modal-btn-2')
+// let modalBtn3 = document.querySelector('modal-btn-3')
+// let modalBtn4 = document.querySelector('modal-btn-4')
+// let modalBtn5 = document.querySelector('modal-btn-5')
+
+// modalBtn.addEventListener('click', () => {
+//     modal.style.display = 'none'
+// })
+
+// modalBtn2.addEventListener('click', () => {
+//     modal.style.display = 'none'
+// })
+
+// modalBtn3.addEventListener('click', () => {
+//     modal.style.display = 'none'
+// })
+
+// modalBtn4.addEventListener('click', () => {
+//     modal.style.display = 'none'
+// })
+
+// modalBtn5.addEventListener('click', () => {
+//     modal.style.display = 'none'
+// })
+
+// modals close//
+
+let randomQuestions, currentQuestionIndex
 
 var correctAnswers = 0;
 
@@ -30,7 +65,7 @@ showResults.addEventListener('click', () => {
 
 function startGame() {
     startButton.classList.add('hide')
-    shuffleQuestions = myQuestions.sort(() => Math.random() - .5)
+    randomQuestions = myQuestions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
@@ -39,12 +74,12 @@ function startGame() {
 
 function setNextQuestion() {
     resetState()
-    showQuestion(shuffleQuestions[currentQuestionIndex])
+    showQuestion(randomQuestions[currentQuestionIndex])
 }
 
 function resetScore() {
     resetState()
-    showQuestion(shuffleQuestions[currentQuestionIndex])
+    showQuestion(randomQuestions[currentQuestionIndex])
     correctAnswers = 0;
 }
 
@@ -84,12 +119,12 @@ function setScore(score) {
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    //setStatusClass(document.body, correct)
+    setStatusClass(document.body, correct)
     setScore(correct)
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffleQuestions.length > currentQuestionIndex + 1) {
+    if (randomQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         restartButton.classList.remove('hide')
@@ -97,12 +132,14 @@ function selectAnswer(e) {
     }
 }
 
+
+
 function showScore() {
     var scorePercentage = (correctAnswers*100)/myQuestions.length
     if (scorePercentage > 90) {
-        alert("hello you got " + scorePercentage + "%")
+    alert("Congratulations! You scored " + scorePercentage + "%!")
     } else {
-    alert("you got " + scorePercentage + "%" );
+    alert("Nice job! You scored " + scorePercentage + "%!" );
     }
 }
 
