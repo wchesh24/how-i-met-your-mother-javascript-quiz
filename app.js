@@ -197,6 +197,67 @@ const myQuestions = [
             { text: 'Blue French Horn', correct: true}
 
         ]
+    },
+
+    {
+        question: "What is the name of the pub that the gang always hangs out in?",
+        answers: [
+            { text: 'MacLaren' + 's' + 'Pub', correct: true},
+            { text: 'Roanoake Pub', correct: false},
+            { text: 'McMenamins', correct: false},
+            { text: 'Central Perk', correct: false}
+
+        ]
+    },
+    {
+        question: "In what year is Ted telling his story to his kids?",
+        answers: [
+            { text: '2020', correct: false},
+            { text: '2025', correct: false},
+            { text: '2030', correct: true},
+            { text: '2040', correct: false}
+
+        ]
+    },
+    {
+        question: "In what other popular sitcom did the narrator of Ted play in during the 90's?",
+        answers: [
+            { text: 'Fresh Prince of Bel-Air', correct: false},
+            { text: 'Friends', correct: false},
+            { text: 'Seinfeld', correct: false},
+            { text: 'Full House', correct: true}
+
+        ]
+    },
+    {
+        question: "What was the name of the alter-ego popstar Robin Scherbatsky had in Canada?",
+        answers: [
+            { text: 'Robin Sparkles', correct: true},
+            { text: 'Jessica Sparkles', correct: false},
+            { text: 'Hannah Montana', correct: false},
+            { text: 'Robin Glitter', correct: false}
+
+        ]
+    },
+    {
+        question: "How successful is the Naked Man move?",
+        answers: [
+            { text: '3 out of 4', correct: false},
+            { text: '4 out of 5', correct: false},
+            { text: '1 out of 3', correct: false},
+            { text: '2 out of 3', correct: true}
+
+        ]
+    },
+    {
+        question: "What happens to the mother in the series finale?",
+        answers: [
+            { text: 'She and Ted get a divorce', correct: false},
+            { text: 'Ted proposes and she says yes', correct: false},
+            { text: 'She dies of an illness', correct: true},
+            { text: 'She finally returns the yellow umbrella', correct: false}
+
+        ]
     }
 ]
 
