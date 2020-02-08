@@ -1,0 +1,29 @@
+/*tablets */
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container h1 {
+    text-align: center;
+    font-size: 180%;
+    }
+
+    .btn {
+    color: green;
+    size: 100px;
+    }
+
+    body {
+        font-size: 80%;
+    }
+
+    #question {
+        font-size: 130%;
+    }
+
+}

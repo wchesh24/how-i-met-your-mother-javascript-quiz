@@ -1,7 +1,7 @@
-  
+  @import './queries.css';
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded;
+    font-family: 'calibri';
   }
   
   :root {
@@ -16,7 +16,7 @@
     margin: 0;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--hue), 100%, 20%);
@@ -37,6 +37,10 @@
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+  }
+
+  #question-container {
+    text-align: center;
   }
 
   .container h1 {
@@ -61,7 +65,8 @@
     outline: none;
   }
   
-  .btn:hover {
+  .btn:hover,
+  :active {
     border-color: black;
   }
   
