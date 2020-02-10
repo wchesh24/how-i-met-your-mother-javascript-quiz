@@ -137,9 +137,15 @@ function selectAnswer(e) {
 function showScore() {
     var scorePercentage = (correctAnswers*100)/myQuestions.length
     if (scorePercentage > 90) {
-    alert("Congratulations! You scored " + scorePercentage + "%!")
+    alert("Congratulations! You are a HIMYM pro! You scored " + scorePercentage + "%!")
+    } else if (scorePercentage > 80) {
+    alert("Nice job! You must be a HIMYM enthusiast scoring " + scorePercentage + "%!" );
+    } else if (scorePercentage > 70) {
+    alert("You know your stuff but maybe another run through will serve you well after scoring " + scorePercentage + "%!" );
+    } else if (scorePercentage > 60) {
+    alert("Seems you're a casual fan scoring " + scorePercentage + "%!" );
     } else {
-    alert("Nice job! You scored " + scorePercentage + "%!" );
+    alert("Ouch! You need to brush up on your episodes! You scored " + scorePercentage + "%!" );
     }
 }
 
