@@ -183,7 +183,7 @@ const myQuestions = [
     question:
       "What does Ted present to Robin in the ending of the series finale?",
     answers: [
-      { text: "Her cherished necklase", correct: false },
+      { text: "Her cherished necklace", correct: false },
       { text: "The Pineapple", correct: false },
       { text: "Another new dog", correct: false },
       { text: "Blue French Horn", correct: true }
